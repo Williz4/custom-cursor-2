@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Custom Cursor | 2</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+	</head>
+
+	<body>
+
+		<div class="content">
+			
+			<h1>Cursor Follow on MouseMove</h1>
+
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ullam esse cum dolores fugit reiciendis quam et nihil sit ipsam deleniti praesentium consectetur, ex impedit odio accusantium beatae sint quidem id culpa cupiditate. Libero commodi, nobis, perspiciatis voluptate sed ipsa cupiditate, aspernatur provident dolorem officiis cum ad repellat ducimus id magni quibusdam dolorum! Deserunt perferendis voluptates harum ratione, eius quibusdam?</p>
+
+		</div>
+
+		<div class="cursor"></div>
+		<div class="cursor2"></div>
+
+		<script>
+			
+			const cursor = document.querySelector('.cursor');
+			const cursor2 = document.querySelector('.cursor2');
+
+			document.addEventListener('mousemove', function(e) {
+				cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX+ "px; top: " + e.clientY +"px;"
+			});
+
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,64 @@
+/*Styling Goes Below*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url(bg.jpg);
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	/*cursor: pointer;*/
+}
+
+.content p {
+	width: 700px;
+	line-height: 26px;
+	font-size: 18px;
+	text-align: justify;
+	background: rgba(255, 255, 255, .5);
+	padding: 50px;
+	backdrop-filter: blur(5px);
+}
+
+.cursor {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #c6c6c6;
+	border-radius: 50%;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	transition: .1s;
+}
+
+.cursor2 {
+	position: fixed;
+	width: 8px;
+	height: 8px;
+	background: #c6c6c6;
+	border-radius: 50%;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	transition: .2s;
+}
+
+.content:hover ~ .cursor {
+	transform: translate(-50%, -50%) scale(1.5);
+	border: solid 1px #000;
+}
+
+.content:hover ~ .cursor2 {
+	background: #000;
+	transform: scale(1.3);
+}
